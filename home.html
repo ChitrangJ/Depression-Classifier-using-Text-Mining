@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Document</title>
+	<script src="style/jquery-1.8.2.min.js"></script>
+</head>
+<style>
+    .hide {
+				display: none;
+			}
+	.output-win
+	{
+		position: absolute;
+		top:75%;
+		left: 55%;
+		width: 600px;
+		background-color: #b3d7ff;
+	    padding: 20px;
+	border:1px gray solid;
+	box-shadow: 0px 0px 5px 5px gray;
+	border-radius: 10px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	}
+	#output_win:hover
+	{
+		box-shadow: 0px 0px 20px 5px gray;
+	}
+	.signup-win
+{
+	position: absolute;
+	top:50%;
+	left:65%;
+	width: 400px;
+	background-color: #b3d7ff;
+	padding: 20px;
+	border:1px gray solid;
+	box-shadow: 0px 0px 5px 5px gray;
+	border-radius: 10px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+	#signup-win:hover
+{
+box-shadow: 0px 0px 20px 5px gray;
+}
+	#cross{
+	float: right;
+	background-image: url(cross.jpg);
+	width: 30px; height: 30px;;
+	border: 0px red solid;
+	background-size: contain;
+	margin-right: 10px;
+	margin-top: 10px;;
+}
+	input[type="text"]
+{
+	line-height: 50px;
+	width: 100%;
+	color: darkred;
+	font-size: 15px;
+		background-color: floralwhite;
+	text-align: center;
+	border:1px black solid;
+	outline: none;
+}
+	.user
+{
+	background-repeat: no-repeat;
+	background-size: 30px;
+}
+input[type="text"]:focus
+{
+	background-color: lightgray;
+}
+.headings
+{
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+
+		.btn
+
+		/*class Selector:for reusing the style*/
+			{
+			background-color: white;
+			color: midnightblue;
+			text-align: center;
+			/*text-decoration: underline;*/
+			width: 100px;
+
+			padding: 10px;
+			margin-left: 10px;
+			cursor: pointer;
+			/*border-radius: 10px;*/
+			border-radius: 15px 15px 0px 0px;
+			margin: auto;
+
+		}
+		.btn:hover { /* hover is fixed*/
+			background-color: wheat;
+			/*border-radius: 0px 0px 15px 15px;*/
+			border-radius: 15px 0px 15px 0px;
+		}
+		.btn:active{ /* active is fixed*/
+			transform: translate(0px,5px);
+		}
+
+		.show {
+			display: block;
+		}
+
+body {
+  background-image: url("deepLearning.gif");
+  background-size: cover;
+}
+		{
+			alert("Negative");
+		}
+</style>
+<script type="text/javascript">
+		$(document).ready(function() {
+
+			$("#btn-signup").click(function() {
+				$(".signup-win").slideDown(2000);
+
+			});
+			//--------------------------
+			$("#cross").click(function() {
+				//$("#signup-win").fadeOut();
+				$(".signup-win").hide(2000);
+			});
+			$("#btn-output").bind("click",function() {
+				alert();
+				("#signup-win").show();
+			});
+
+		});
+
+
+	</script>
+
+<body>
+<h1 style="text-align:right ; color : white; font-size: 50px" > Depression Analysis using Tweets</h1>
+<table style="right:450px" align="right";>
+    <tr>
+        <td width="500 px">
+            <h3 style="color: white; font-size: 20px">
+                "Getting better from depression demands a lifelong commitment. You have to made that commitment for your life's sake and for the sake of those who love you."
+            </h3>
+        </td>
+    </tr>
+    <tr>
+            <td align="center" width="500px">
+					<div class="btn" id="btn-signup">Analyse Post</div>
+
+
+	<div class="signup-win hide">
+		<div id="cross"></div>
+		<table width="100%" border=0>
+			<tr>
+				<td align="center">
+					<span class="headings">Enter Post</span>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="text" placeholder="Please! Enter Post here." id="txtUid" class="user"></td>
+			</tr>
+			<tr>
+				<td align="center">
+					<div style="background-color: #6610f2; color: white" class="btn" id="btn-output">Analyse</div>
+
+
+
+				</td>
+			</tr>
+		</table>
+	</div>
+            </td>
+    </tr>
+</table>
+
+</body>
+</html>
